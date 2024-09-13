@@ -13,6 +13,7 @@ export class AppController {
 
   @Post('setNumber')
   setNumber(@Req() request: Request): any {
+    console.log('changes')
     return this.appService.setNumber(request.body);
   }
   @Post('addNumber')
