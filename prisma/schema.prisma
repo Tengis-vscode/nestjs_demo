@@ -12,3 +12,13 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model List {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  dueDate     DateTime
+  priority    Int
+  status      Int      @default(1)
+  createdAt   DateTime @default(now())
+}
